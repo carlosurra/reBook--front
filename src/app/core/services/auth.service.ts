@@ -17,7 +17,7 @@ export class AuthService {
 
   login({ email, password }) {
     return this.http
-      .post(`${environment.apiBaseUrl}/account/login`, {
+      .post(`${environment.apiBaseUrl}/api/account/login`, {
         email,
         password
       })
