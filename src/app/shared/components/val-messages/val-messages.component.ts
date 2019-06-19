@@ -9,6 +9,4 @@ import { FormControl, FormGroup } from '@angular/forms';
 export class ValMessagesComponent {
 @Input() control: FormControl;
 @Input() group: FormGroup;
- 
-
 }

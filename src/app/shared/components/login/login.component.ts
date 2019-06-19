@@ -26,13 +26,10 @@ export class LoginComponent {
   login() {
     if (this.loginForm.valid) {
       this.authService.login(this.loginForm.value).subscribe(
-        () => {
-          this.userService.getUserProfile().subscribe();
-          console.log(this.authService, this.userService);
-          this.router.navigate(['/wall']);
-        },
+        
         () => this.loginForm.get('password').setValue('')
       );
+      this.router.navigate(['/wall']);
     }
   }
 }

@@ -6,20 +6,39 @@ import {
   HttpRequest
 } from '@angular/common/http';
 
-import { Observable, of } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
+import { Router } from '@angular/router';
+import { ToastService } from '../services/toast.service';
+import { AuthService } from '../services/auth.service';
 
 @Injectable()
 export class ErrorInterceptor implements HttpInterceptor {
+  constructor(
+    private authService: AuthService,
+    private router: Router,
+    private toastService: ToastService
+  ) {}
+
   intercept(
     req: HttpRequest<any>,
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
     return next.handle(req).pipe(
       catchError(error => {
-        console.log(error);
+        if (
+          error.url.indexOf('/account/login') === -1 &&
+          this.router.routerState.snapshot.url !== '/home' &&
+          error.status === 401
+        ) {
+          this.authService.logout();
+        } else {
+          console.log();
+          this.toastService.addToast(error.error);
+          
+        }
 
-        return of(error);
+        return throwError(error);
       })
     );
   }

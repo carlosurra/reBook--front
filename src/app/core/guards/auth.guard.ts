@@ -15,14 +15,14 @@ export class AuthGuard implements CanActivate {
 
   canActivate(route: ActivatedRouteSnapshot, snapshot: RouterStateSnapshot) {
     if (this.authService && this.authService.authInfo) {
-      const { accessToken } = this.authService.authInfo;
-
+      //const { accessToken } = this.authService.authInfo;
+     const { accessToken } = JSON.parse(localStorage.getItem('auth'));
       if (accessToken) {
         return true;
       }
     }
 
-    this.router.navigate(['/welcome']);
+    this.router.navigate(['/home']);
 
     return false;
   }

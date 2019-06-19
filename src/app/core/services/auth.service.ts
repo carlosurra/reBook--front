@@ -17,7 +17,7 @@ export class AuthService {
 
   login({ email, password }) {
     return this.http
-      .post(`${environment.apiBaseUrl}/api/account/login`, {
+      .post(`${environment.apiBaseUrl}/account/login`, {
         email,
         password
       })
@@ -29,9 +29,9 @@ export class AuthService {
       );
   }
 
-  register({ fullName, email, password }) {
+  register({ name, email, password }) {
     return this.http.post(`${environment.apiBaseUrl}/account`, {
-      fullName,
+      name,
       email,
       password
     });
@@ -40,6 +40,6 @@ export class AuthService {
   logout() {
     localStorage.removeItem('auth');
     this.authInfo = null;
-    this.router.navigate(['/welcome']);
+    this.router.navigate(['/home']);
   }
 }

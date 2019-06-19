@@ -6,6 +6,8 @@ import { RegisterComponent } from './components/register/register.component';
 import { ValMessagesComponent } from './components/val-messages/val-messages.component';
 import { MarkAsTouchedDirective } from './directives/marktouched.directive';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AddBookComponent } from './components/add-book/add-book.component';
+import { ValAddBookComponent } from './components/val-book-messages/val-book-messages.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +16,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     RegisterComponent,
     ValMessagesComponent,
     MarkAsTouchedDirective,
+    AddBookComponent,
+    ValAddBookComponent,
   ],
   imports: [
     CommonModule,
@@ -25,6 +29,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     LoginComponent,
     ValMessagesComponent,
     MarkAsTouchedDirective,
+    ValAddBookComponent,
+    AddBookComponent,
   ]
 })
 export class SharedModule { }

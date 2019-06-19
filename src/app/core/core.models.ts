@@ -6,28 +6,55 @@ export interface AuthInfo {
   uuid: string;
 }
 
-export interface Friend {
-  _id: string;
+export interface User {
   uuid: string;
-  confirmed: boolean;
-  createdAt: Date;
-  confirmedAt: Date;
-  rejectedAt?: any;
+  name: string;
+  email: string;
 }
 
-export interface Preferences {
-  isPublicProfile: boolean;
-  linkedIn?: string;
-  twitter?: string;
-  github?: string;
+export interface Book {
+  id: number;
+  title: string;
+  users_uuid: string;
+  author: string;
   description: string;
 }
 
-export interface SocialNetworkUser {
-  uuid: string;
-  fullName: string;
-  email: string;
-  friends: Friend[];
-  avatarUrl: string;
-  preferences: Preferences;
+export interface Error {
+  id: string;
+  links: any;
+  status: string;
+  code: string;
+  title: string;
+  detail: string;
+  source: {
+    pointer: string;
+    parameter: string;
+  };
+  meta: any;
+  data: ErrorData;
 }
+
+export interface ErrorData {
+  pattern: any;
+  value: string;
+  key: string;
+  label: string;
+}
+
+export interface Request {
+  uuid: string;
+  confirmed: boolean;
+  createdAt: number;
+  confirmedAt: number;
+  rejectedAt: number;
+}
+
+export interface Library {
+  title: string;
+  users_uuid: string;
+  author: string;
+  description: string;
+}
+
+
