@@ -1,4 +1,7 @@
-<div class="addbook bg-info">
+<html>
+<body>
+  <main class="container">
+<div class="addbook">
     <form 
     class="addbookForm "
     [formGroup]="addBookForm"
@@ -35,7 +38,16 @@
       formControlName="description"
       placeholder="Share any information"
     />
+    <div class="form-group">
+        <input 
+        type="file" 
+        class="form-control-file" 
+        id="exampleFormControlFile1" 
+        placeholder="Upload Cover"
+        >
+      </div>
   </div>
+  
   <div>
     <button type="submit"
     class="btn btn-white btn-animated">
@@ -44,4 +56,6 @@
   </div>
   </form>
   </div>
-    
+</main>
+</body> 
+</html> 

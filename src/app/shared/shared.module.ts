@@ -8,6 +8,7 @@ import { MarkAsTouchedDirective } from './directives/marktouched.directive';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AddBookComponent } from './components/add-book/add-book.component';
 import { ValAddBookComponent } from './components/val-book-messages/val-book-messages.component';
+import { CoverComponent } from './components/cover/cover.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ValAddBookComponent } from './components/val-book-messages/val-book-mes
     MarkAsTouchedDirective,
     AddBookComponent,
     ValAddBookComponent,
+    CoverComponent,
   ],
   imports: [
     CommonModule,
@@ -31,6 +33,7 @@ import { ValAddBookComponent } from './components/val-book-messages/val-book-mes
     MarkAsTouchedDirective,
     ValAddBookComponent,
     AddBookComponent,
+    CoverComponent
   ]
 })
 export class SharedModule { }

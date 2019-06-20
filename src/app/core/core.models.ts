@@ -10,6 +10,7 @@ export interface User {
   uuid: string;
   name: string;
   email: string;
+  avatar: string;
 }
 
 export interface Book {
@@ -18,6 +19,7 @@ export interface Book {
   users_uuid: string;
   author: string;
   description: string;
+  cover: string;
 }
 
 export interface Error {
@@ -55,6 +57,7 @@ export interface Library {
   users_uuid: string;
   author: string;
   description: string;
+  cover: string;
 }
 
 

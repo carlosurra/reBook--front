@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
 import { RegisterComponent } from './shared/components/register/register.component';
 import { AuthGuard } from './core/guards/auth.guard';
+import { AddBookComponent } from './shared/components/add-book/add-book.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'register',
     component: RegisterComponent
+  },
+  {
+    path: 'addbook',
+    component: AddBookComponent
   },
   {
     path: '**',
