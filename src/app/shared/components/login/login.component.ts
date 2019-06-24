@@ -13,7 +13,7 @@ import { UserService } from 'src/app/core/services/user.service';
 export class LoginComponent {
   loginForm = this.fb.group({
     email: ['', [Validators.required, MailValidator]],
-    password: ['', [Validators.required, Validators.minLength(7)]]
+    password: ['', [Validators.required, Validators.minLength(6)]]
   });
 
   constructor(

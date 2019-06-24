@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LibraryService } from 'src/app/core/services/library.service';
+import { UserService } from 'src/app/core/services/user.service';
 
 
 @Component({
@@ -13,7 +14,8 @@ export class LibraryComponent implements OnInit {
   showBooks = false;
   constructor(
     private router: Router, 
-    public libraryService: LibraryService
+    public libraryService: LibraryService,
+    public userService: UserService,
     ) {}
 
   ngOnInit() {
@@ -22,5 +24,7 @@ export class LibraryComponent implements OnInit {
     .subscribe(
       (library) => {if(library.length > 0)this.showBooks = true});
   } 
+
+    
   }
 

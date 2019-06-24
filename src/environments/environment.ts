@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiBaseUrl: 'https://rebookback.herokuapp.com/'
+  apiBaseUrl: 'http://localhost:3000'
 };
 
 /*

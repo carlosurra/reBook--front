@@ -130,9 +130,6 @@
     formControlName="name"
     placeholder="Enter your name"
   />
-  <rb-val-messages
-    [control]="registerForm.get('fullName')"
-  ></rb-val-messages>
 </div>
 <div class="form-group">
   <input
@@ -141,9 +138,6 @@
     formControlName="email"
     placeholder="Enter your mail"
   />
-  <rb-val-messages
-    [control]="registerForm.get('email')"
-  ></rb-val-messages>
 </div>
 <div class="form-group">
   <input
@@ -152,9 +146,6 @@
     formControlName="password"
     placeholder="Enter your password"
   />
-  <rb-val-messages
-    [control]="registerForm.get('password')"
-  ></rb-val-messages>
 </div>
 <div class="form-group">
   <input
@@ -163,10 +154,6 @@
     formControlName="confirmPassword"
     placeholder="Confirm your password"
   />
-  <rb-val-messages
-    [control]="registerForm.get('confirmPassword')"
-    [group]="registerForm"
-  ></rb-val-messages>
 </div>  
 <div>
   <button type="submit"

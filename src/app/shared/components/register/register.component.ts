@@ -4,6 +4,7 @@ import { MatchPassValidator } from '../../validators/matchpass.validator';
 import { AuthService } from 'src/app/core/services/auth.service';
 import { ModalService } from 'src/app/core/services/modal.service';
 import { Router } from '@angular/router';
+import { MailValidator } from '../../validators/mail.validator';
 
 
 
@@ -14,8 +15,8 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent {
   registerForm = this.fb.group({
-          name: ['', [Validators.required, Validators.minLength(6)]],
-          email: ['', [Validators.required, Validators.email]],
+          name: ['', [Validators.minLength(2)]],
+          email: ['', [Validators.required, MailValidator]],
           password: ['', [Validators.required, Validators.minLength(6)]],
           confirmPassword: ['', [Validators.required]],
       },

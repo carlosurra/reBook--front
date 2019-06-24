@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { fadeAnimation } from './animations';
-import { LoaderService } from './core/services/loader.service';
 
 @Component({
   selector: 'rb-root',
@@ -8,8 +7,7 @@ import { LoaderService } from './core/services/loader.service';
   styleUrls: ['./app.component.scss'],
   animations: [fadeAnimation]
 })
-export class AppComponent {
-  title = 'rebook-front';
+export class AppComponent 
 
-  constructor(public loaderService: LoaderService) {}
-}
+   {}
+

@@ -9,6 +9,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AddBookComponent } from './components/add-book/add-book.component';
 import { ValAddBookComponent } from './components/val-book-messages/val-book-messages.component';
 import { CoverComponent } from './components/cover/cover.component';
+import { AvatarComponent } from './components/avatar/avatar.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { CoverComponent } from './components/cover/cover.component';
     AddBookComponent,
     ValAddBookComponent,
     CoverComponent,
+    AvatarComponent,
   ],
   imports: [
     CommonModule,
@@ -33,7 +35,8 @@ import { CoverComponent } from './components/cover/cover.component';
     MarkAsTouchedDirective,
     ValAddBookComponent,
     AddBookComponent,
-    CoverComponent
+    CoverComponent,
+    AvatarComponent,
   ]
 })
 export class SharedModule { }

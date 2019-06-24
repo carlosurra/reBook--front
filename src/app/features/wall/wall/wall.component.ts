@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
     templateUrl: './wall.component.html',
     styles: [
       `
-        
-  
+        .global {
+          background: black;
         }
       `
     ]

@@ -7,7 +7,7 @@ import { Component } from "@angular/core";
     styles:[
         `
         footer{
-            background-color: white;
+            background-color: black;
             padding: 20px 0px;
         }
         
@@ -23,7 +23,7 @@ import { Component } from "@angular/core";
         }
         
         footer ul li a{
-            color:black;
+            color:white;
             padding:20px;
         }
         

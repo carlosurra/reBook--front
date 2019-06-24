@@ -14,6 +14,7 @@ import { ModalService } from 'src/app/core/services/modal.service';
       title: ['', [Validators.required, Validators.minLength(1)]],  
       author: ['', [Validators.required, Validators.minLength(3)]],  
       description: [''],  
+      cover: [''],
     });  
   
     constructor(  
@@ -27,7 +28,8 @@ import { ModalService } from 'src/app/core/services/modal.service';
       const {  
         title,  
         author,  
-        description  
+        description,
+        cover 
       } = this.addBookForm.value; 
 
     if (this.addBookForm.valid) {  
@@ -35,7 +37,8 @@ import { ModalService } from 'src/app/core/services/modal.service';
           .addBook({ 
               title, 
               author, 
-              description })  
+              description,
+              cover })  
           .subscribe(() => {  
             this.addBookForm.reset();  
             this.modalService.open(  

@@ -1,4 +1,6 @@
 import { Component } from "@angular/core";
+import { Router } from '@angular/router';
+import { UserService } from 'src/app/core/services/user.service';
 
 
 @Component({
@@ -6,6 +8,9 @@ import { Component } from "@angular/core";
     templateUrl: './wall-header.component.html',
     styles: [
         `
+        .header-container{
+          background-color: black;
+        }
         .header {
           height: 55vh;
           background-image: 
@@ -99,4 +104,15 @@ import { Component } from "@angular/core";
       ]
     
 })
-export class WallHeaderComponent {}
+export class WallHeaderComponent {
+  constructor(
+    private router: Router,
+    public userService: UserService
+  ){}
+
+  ngOnInit() {
+    this.userService
+    .getUserProfile()
+    .subscribe()
+  }
+}
