@@ -16,14 +16,12 @@ export class AvatarComponent implements OnChanges {
   imageUrl = '';
 
   @Input() user: User;
-  @Input() width = 'auto';
-  @Input() height = 'auto';
 
   ngOnChanges(changes: SimpleChanges) {
-    if (changes.users && changes.users.currentValue.avatar !== undefined) {
+    if (changes.user && changes.user.currentValue.avatar !== undefined) {
       this.imageUrl =
-        changes.users.currentValue.avatarUrl ||
-        `https://api.adorable.io/avatars/128/${changes.users.currentValue.uuid}`;
+        changes.user.currentValue ||
+        `https://api.adorable.io/avatars/128/${changes.user.currentValue.uuid}`;
     }
   }
 }
