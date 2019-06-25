@@ -2,9 +2,9 @@
 		<header class="header">
 			<div class="text-box">
 			<h1 class="heading-primary">
-				<rb-avatar [user]="userService?.currentUser" height="50px"></rb-avatar>
+				<rb-avatar [user]="this.userService?.currentUser" height="50px"></rb-avatar>
 				<span class="heading-primary-main">Welcome to your library<span class="heading-primary-sim">/</span></span>
-				<span class="heading-primary-sub">[user]="userService?.currentUser"</span>
+				<span class="heading-primary-sub"></span>
 			</h1>
 			<button id="popup"
 			class="btn btn-white btn-animated text-info" routerLink="/addbook" >ADD BOOK</button>			

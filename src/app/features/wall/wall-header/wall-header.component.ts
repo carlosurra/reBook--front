@@ -113,6 +113,8 @@ export class WallHeaderComponent {
   ngOnInit() {
     this.userService
     .getUserProfile()
-    .subscribe()
+    .subscribe(res =>{
+      console.log({res})
+    })
   }
 }
