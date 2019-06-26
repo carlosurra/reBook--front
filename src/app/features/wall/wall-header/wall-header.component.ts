@@ -8,6 +8,7 @@ import { UserService } from 'src/app/core/services/user.service';
     templateUrl: './wall-header.component.html',
     styles: [
         `
+        
         .header-container{
           background-color: black;
         }

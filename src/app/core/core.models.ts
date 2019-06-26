@@ -60,4 +60,12 @@ export interface Library {
   cover: string;
 }
 
+export interface Users {
+  name: string;
+  email: string;
+  avatar:string;
+  city: string;
+
+}
+
 

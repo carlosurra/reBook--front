@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { tap } from 'rxjs/operators';
 import { Injectable } from '@angular/core';
 import { AuthService } from './auth.service';
-import { User } from '../core.models';
+import { User, Users } from '../core.models';
 
 
 @Injectable({
@@ -11,6 +11,8 @@ import { User } from '../core.models';
 })
 export class UserService {
   currentUser: User;
+  users: Users[];
+
   
   constructor(private http: HttpClient, private authService: AuthService) {}
 
@@ -20,5 +22,16 @@ export class UserService {
       .pipe(tap((user: User) => (this.currentUser = user[0])));
   }
 
-  
+  getUsers() {
+    return this.http
+    .get(`${environment.apiBaseUrl}/search`)
+    .pipe(tap((users: Users[]) => {
+      this.users = users;
+      console.log(this.users);
+    })
+    );
+  }
 }
+  
+
+  

@@ -19,6 +19,15 @@ import { Library } from 'src/app/core/core.models';
             this.library = library;    
             console.log(this.library);    
           })    
-        );    
+        );        
+      }
+      uploadCover(image: File) {
+        const formData = new FormData();
+    
+        formData.append('cover', image);
+    
+        return this.http.post(`${environment.apiBaseUrl}/cover`, formData, {
+          observe: 'response'
+        });
       }
     }

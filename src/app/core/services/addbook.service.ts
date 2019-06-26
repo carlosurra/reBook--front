@@ -13,13 +13,11 @@ export class AddBookService {
   addBook({ 
       title, 
       author, 
-      description,
-      cover }) {
+      description }) {
     return this.http.post(`${environment.apiBaseUrl}/book`, {
       title,
       author,
-      description,
-      cover
+      description
     });
   }
   open() {
