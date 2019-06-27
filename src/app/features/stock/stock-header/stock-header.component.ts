@@ -4,16 +4,13 @@ import { UserService } from 'src/app/core/services/user.service';
 
 
 @Component({
-    selector: 'rb-wall-header',
-    templateUrl: './wall-header.component.html',
+    selector: 'rb-stock-header',
+    templateUrl: './stock-header.component.html',
     styles: [
         `
         
         .header-container{
           background-color: black;
-        }
-        .avatar {
-          margin: 2rem;
         }
         .header {
           height: 55vh;
@@ -108,7 +105,7 @@ import { UserService } from 'src/app/core/services/user.service';
       ]
     
 })
-export class WallHeaderComponent {
+export class StockHeaderComponent {
   constructor(
     private router: Router,
     public userService: UserService

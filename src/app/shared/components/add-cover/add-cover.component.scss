@@ -1,0 +1,29 @@
+@import '~src/styles.scss';
+
+input {
+  display: none;
+  
+}
+
+
+.cover-upload-container {
+  position: relative;
+  background-color: #FFBF00;
+  cursor: pointer;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-size: contain;
+  fa-icon {
+    font-size: 3rem;
+    color: $white;
+    position: absolute;
+    top: 20px;
+    left: 27px;
+  }
+  &:hover {
+    opacity: 0.7;
+  }
+  
+}

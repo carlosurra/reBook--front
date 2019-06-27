@@ -8,7 +8,9 @@
   flex-wrap: wrap;
   justify-content: space-between;
   }
-
+  i {
+    cursor: pointer;
+    }
   .card {
     flex: 0 1 24%;
     margin-top: 2rem;

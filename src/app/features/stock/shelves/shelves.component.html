@@ -1,0 +1,15 @@
+<div *ngIf="showShelves === false" class= "container">
+    </div>
+    <div *ngIf="showShelves === true" class="global">
+    <div *ngFor="let stock of libraryService.stock">
+    <div class="card" style="width: 21rem">
+        <rb-cover [library]="stock.cover"></rb-cover>
+        <div class="card-body">
+            <h5 class="card-title text-info">{{ stock.title }}</h5>
+            <h5 class="card-title text-info">{{ stock.author }}</h5>
+            <p class="card-text text-white">{{ stock.description }}</p>
+                </div>
+        </div>
+    </div>
+    
+  

@@ -26,6 +26,11 @@ const routes: Routes = [
     loadChildren: './features/users/users.module#UsersModule'
   },
   {
+    path: 'stock',
+    canActivate: [AuthGuard],
+    loadChildren: './features/stock/stock.module#StockModule'
+  },
+  {
     path: 'about',
     loadChildren: './features/about/about.module#AboutModule'
   },

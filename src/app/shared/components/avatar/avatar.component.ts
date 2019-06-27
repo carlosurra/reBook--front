@@ -5,7 +5,7 @@ import { User } from '../../../core/core.models';
   selector: 'rb-avatar',
   template: `
     <img
-      class="img-responsive rounded-circle"
+      class="img-responsive rounded-circle img-thumbnail"
       *ngIf="imageUrl"
       [src]="imageUrl"
       [ngStyle]="{ width: width, height: height, 'min-width': width }"

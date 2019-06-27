@@ -7,6 +7,8 @@ import { CoreModule } from './core/core.module';
 import { LayoutModule } from './layout/layout.module';
 import { SharedModule } from './shared/shared.module';
 import { AppInitializerModule } from './app-initializer.module';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+
 
 @NgModule({
   declarations: [
@@ -20,6 +22,7 @@ import { AppInitializerModule } from './app-initializer.module';
     CoreModule,
     LayoutModule,
     SharedModule,
+    AngularFontAwesomeModule
 
   ],
   providers: [],

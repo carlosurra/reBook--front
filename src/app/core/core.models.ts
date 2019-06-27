@@ -11,6 +11,7 @@ export interface User {
   name: string;
   email: string;
   avatar: string;
+  city: string;
 }
 
 export interface Book {
@@ -53,6 +54,7 @@ export interface Request {
 }
 
 export interface Library {
+  id: number;
   title: string;
   users_uuid: string;
   author: string;
@@ -65,6 +67,14 @@ export interface Users {
   email: string;
   avatar:string;
   city: string;
+
+}
+
+export interface Stock {
+  title: string;
+  author: string;
+  description:string;
+  cover: string;
 
 }
 

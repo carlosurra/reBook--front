@@ -22,6 +22,9 @@ export class UserService {
       .pipe(tap((user: User) => (this.currentUser = user[0])));
   }
 
+  
+  
+
   getUsers() {
     return this.http
     .get(`${environment.apiBaseUrl}/search`)

@@ -6,43 +6,23 @@ import { Error } from '../core.models';
 })
 export class ToastService {
   toasts = [];
-
   addToast(toastData: ToastData | Error, delay: number = 5000) {
-
-    if ('message' in toastData) {
- 
-      this.toasts.unshift(toastData);
- 
-    } else {
- 
-      this.toasts.unshift({
- 
-        title: 'Error',
- 
-        message: this.getErrorMessage(toastData),
- 
-        variant: 'danger'
- 
-      });
- 
-    }
- 
- 
- 
-    this.delayAndRemove(delay);
- 
+    if ('message' in toastData) { 
+      this.toasts.unshift(toastData); 
+    } else { 
+      this.toasts.unshift({ 
+        title: 'Error', 
+        message: this.getErrorMessage(toastData), 
+        variant: 'danger' 
+      }); 
+    } 
+    this.delayAndRemove(delay); 
   }
- Collapse
- 
- 
- 
- 
 
   getErrorMessage({ detail, data }: Error): string {
     if (detail) {
       return detail;
     }
-
     if (data) {
       return `You ${data.label} is wrong`;
     }

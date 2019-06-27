@@ -10,6 +10,7 @@ import { AddBookComponent } from './components/add-book/add-book.component';
 import { ValAddBookComponent } from './components/val-book-messages/val-book-messages.component';
 import { CoverComponent } from './components/cover/cover.component';
 import { AvatarComponent } from './components/avatar/avatar.component';
+import { AddCoverComponent } from './components/add-cover/add-cover.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { AvatarComponent } from './components/avatar/avatar.component';
     ValAddBookComponent,
     CoverComponent,
     AvatarComponent,
+    AddCoverComponent,
   ],
   imports: [
     CommonModule,
@@ -37,6 +39,7 @@ import { AvatarComponent } from './components/avatar/avatar.component';
     AddBookComponent,
     CoverComponent,
     AvatarComponent,
+    AddCoverComponent,
   ]
 })
 export class SharedModule { }

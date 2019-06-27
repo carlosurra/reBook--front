@@ -10,12 +10,9 @@
           <h5 class="card-title text-info">{{ library.author }}</h5>
           <p class="card-text text-white">{{ library.description }}</p>
           <div>
-                <button 
-                class="btn btn-white btn-animated">
-                DELETE
-              </button>
-              
+              <i class="fas fa-trash-alt text-info" (click)="deleteBook(library.id)">DELETE</i> 
               </div>
       </div>
+      <rb-add-cover [imageUrl]="library.cover" [id]="library.id"></rb-add-cover>
   </div>
   

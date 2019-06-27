@@ -25,6 +25,20 @@ export class LibraryComponent implements OnInit {
       (library) => {if(library.length > 0)this.showBooks = true});
   } 
 
-    
+    deleteBook(id) {
+      this.libraryService
+      .deleteBook(id)
+      .subscribe();
+    }
+
+    uploadCover() {
+      this.libraryService
+      .getLibrary()
+      .subscribe()
+    }
+
+    refresh(): void {
+      window.location.reload();
+    }    
   }
 

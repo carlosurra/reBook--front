@@ -1,22 +1,17 @@
+    <div *ngIf="showUsers === false" class="container">
+      </div>
+      <div *ngIf="showUsers === true" class="global">
+        <div *ngFor="let users of userService.users">
+        <div class="card align-middle">
+          <h5 class="card-title text-info text-center">{{ users.name }}</h5>
+          <h5 class="text-info text-center">{{ users.city }}</h5>
+          <div>
+              <button 
+              class="btn btn-white btn-animated">
+              VISIT
+            </button>            
+            </div>
 
-  <div *ngIf="showUsers === false" class= "container">
-    </div>
-    <div *ngIf="showUsers === true" class="global">
-    <div *ngFor="let users of userService.users">
-    <div class="card" style="width: 21rem">
-				<rb-avatar class="avatar" [user]="this.userService?.currentUser"></rb-avatar>
-        <div class="card-body">
-            <h5 class="card-title text-info">{{ users.name }}</h5>
-            <h5 class="card-title text-info">{{ users.email }}</h5>
-            <h5 class="card-title text-info">{{ users.city }}</h5>
-
-            <div>
-                  <button 
-                  class="btn btn-white btn-animated">
-                  DELETE
-                </button>
-                
-                </div>
+          <rb-avatar class="avatar w-75" [user]="users"></rb-avatar>
+          </div>
         </div>
-    </div>
-    
