@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiBaseUrl: 'https://git.heroku.com/rebookback.git'
+  apiBaseUrl: 'https://rebookback.herokuapp.com/'
 };
 
 /*
