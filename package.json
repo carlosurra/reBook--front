@@ -29,13 +29,13 @@
         "express": "^4.17.1",
         "jwt-decode": "^2.2.0",
         "path": "^0.12.7",
-        "preact-cli": "^2.2.1",
+        "preact-cli": "^3.4.1",
         "rxjs": "~6.3.3",
         "tslib": "^1.10.0",
         "zone.js": "~0.8.26"
     },
     "devDependencies": {
-        "@angular-devkit/build-angular": "~0.13.0",
+        "@angular-devkit/build-angular": "~15.0.0",
         "@angular/cli": "^7.3.9",
         "@angular/compiler-cli": "~7.2.0",
         "@angular/language-service": "~7.2.0",
